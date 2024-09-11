@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+
+    <bean id = "student"    class="org.atuluttam.Student"   autowire="byName" lazy-init="true">
+     <!-- <property name="Laptop" ref="laptop"/>-->
+      <constructor-arg ref="laptop"/>
+    </bean>
+
+
+    <bean id = "laptop" class="org.atuluttam.Laptop">
+
+    </bean>
+
+</beans>
